@@ -40,4 +40,3 @@ Then select and open ```Async.sln```
 ------------------------------
 
 ## Change Log
-***[The change log will list any changes made to the code base. This includes any changes from TA/Instructor feedback]***
