@@ -5,17 +5,10 @@ using System.Threading.Tasks;
 
 namespace AsyncInn.Models
 {
-    public class Room
+    public class Amenities
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public int Layout { get; set; }
-    }
 
-    public enum Layouts
-    {
-        Studio = 0,
-        OneBedroom = 1,
-        TwoBedroom = 2,
     }
 }
