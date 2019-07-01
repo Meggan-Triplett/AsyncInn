@@ -8,7 +8,7 @@
 
 ## Description
 
-Entity framework build out for AsyncInn's inventory. 
+Database for AsyncInn's hotel inventory database.
 
 ------------------------------
 
@@ -36,7 +36,7 @@ Then select and open ```Async.sln```
 ##### Entity Relationship Overview
 ![Async ERD Overview](/assets/ERDOverview.md)
 
-
 ------------------------------
 
 ## Change Log
+1.2 - Added ERD, ERD Overview, and updated README. DB now created. - 6/30/2019 - M.Triplett
