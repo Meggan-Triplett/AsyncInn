@@ -26,7 +26,6 @@ namespace AsyncInn.Data
             new { roomamenity.AmenitiesID, roomamenity.RoomID });
 
             /// Seed the Data
-
             modelBuilder.Entity<Hotel>().HasData(
                 new Hotel
                 {
@@ -77,8 +76,53 @@ namespace AsyncInn.Data
                     State = "California",
                     Phone = "(206) 448 - 8600"
                 }
-
                 );
+
+            modelBuilder.Entity<Hotel>().HasData(
+                new Room
+                {
+                   
+                }
+                );
+
+            modelBuilder.Entity<Hotel>().HasData(
+                new Amenities
+                {
+                    ID = 1,
+                    Name = "Sauna",
+                },
+
+                new Amenities
+                {
+                    ID = 2,
+                    Name = "Butler",
+                },
+
+                new Amenities
+                {
+                    ID = 3,
+                    Name = "Chef",
+                },
+
+                new Amenities
+                {
+                    ID = 4,
+                    Name = "Masseuse",
+                },
+
+                new Amenities
+                {
+                    ID = 5,
+                    Name = "Theater Room",
+                },
+
+                new Amenities
+                {
+                    ID = 6,
+                    Name = "Infinity Pool",
+                }
+                );
+
         }
 
         public DbSet<Hotel> Hotels { get; set; }
