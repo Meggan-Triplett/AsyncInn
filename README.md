@@ -1,7 +1,7 @@
 # AsyncInn
 
 -----------------------------
-#### Entity Framework
+#### Building A Database with Complete Entity Framework
 ##### *Author: Meggan Triplett*
 
 ------------------------------
@@ -31,10 +31,10 @@ Then select and open ```Async.sln```
 ## Visuals
 
 ##### Entity Relationship Diagram
-![Async ERD](/assets/AsyncInnERD.png)
+![Async ERD](https://raw.githubusercontent.com/Meggan-Triplett/AsyncInn/master/AsyncInn/AsyncInn/assets/AsyncInnERD.png)
 
 ##### Entity Relationship Overview
-![Async ERD Overview](/assets/ERDOverview.md)
+![Async ERD Overview](https://raw.githubusercontent.com/Meggan-Triplett/AsyncInn/master/AsyncInn/AsyncInn/assets/ERDOverview.md)
 
 ------------------------------
 
