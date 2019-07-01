@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 
+
 namespace AsyncInn.Data
 {
     public class AsyncInnDBContext: DbContext
@@ -75,13 +76,6 @@ namespace AsyncInn.Data
                     City = "Los Angeles",
                     State = "California",
                     Phone = "(206) 448 - 8600"
-                }
-                );
-
-            modelBuilder.Entity<Hotel>().HasData(
-                new Room
-                {
-                   
                 }
                 );
 

@@ -9,6 +9,7 @@
 ## Description
 
 Database for AsyncInn's hotel inventory database.
+[Async ERD Overview](https://github.com/Meggan-Triplett/AsyncInn/blob/master/AsyncInn/AsyncInn/assets/ERDOverview.md)
 
 ------------------------------
 
@@ -33,8 +34,8 @@ Then select and open ```Async.sln```
 ##### Entity Relationship Diagram
 ![Async ERD](https://raw.githubusercontent.com/Meggan-Triplett/AsyncInn/master/AsyncInn/AsyncInn/assets/AsyncInnERD.png)
 
-##### Entity Relationship Overview
-![Async ERD Overview](https://raw.githubusercontent.com/Meggan-Triplett/AsyncInn/master/AsyncInn/AsyncInn/assets/ERDOverview.md)
+
+
 
 ------------------------------
 
