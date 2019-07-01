@@ -30,12 +30,12 @@ Then select and open ```Async.sln```
 
 ## Visuals
 
-##### Application Start
-![Image 1](https://via.placeholder.com/750x500)
-##### Using the Application
-![Image 1](https://via.placeholder.com/750x500)
-##### Application End
-![Image 1](https://via.placeholder.com/750x500)
+##### Entity Relationship Diagram
+![Async ERD](/assets/AsyncInnERD.png)
+
+##### Entity Relationship Overview
+![Async ERD Overview](/assets/ERDOverview.md)
+
 
 ------------------------------
 
