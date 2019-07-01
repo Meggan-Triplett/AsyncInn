@@ -20,5 +20,7 @@ namespace AsyncInn.Models
         Studio = 0,
         OneBedroom = 1,
         TwoBedroom = 2,
+        Suite = 3,
+        Penthouse = 4
     }
 }
