@@ -26,7 +26,7 @@ namespace AsyncInn.Controllers
         }
 
         // GET: Hotels/Details/5
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Details(int id)
         {
             if (id == null)
             {
@@ -86,7 +86,7 @@ namespace AsyncInn.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("ID,Name,StreetAddress,City,State,Phone")] Hotel hotel)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,StreetAddress,City,State,Phone")] Hotel hotel)
         {
             if (id != hotel.ID)
             {
@@ -117,7 +117,7 @@ namespace AsyncInn.Controllers
         }
 
         // GET: Hotels/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> Delete(int id)
         {
             if (id == null)
             {
@@ -145,7 +145,7 @@ namespace AsyncInn.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool HotelExists(string id)
+        private bool HotelExists(int id)
         {
             return _context.Hotels.Any(e => e.ID == id);
         }

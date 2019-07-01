@@ -89,37 +89,37 @@ namespace AsyncInn.Data
                 new Amenities
                 {
                     ID = 1,
-                    Name = "Sauna",
+                    Name = "Sauna"
                 },
 
                 new Amenities
                 {
                     ID = 2,
-                    Name = "Butler",
+                    Name = "Butler"
                 },
 
                 new Amenities
                 {
                     ID = 3,
-                    Name = "Chef",
+                    Name = "Chef"
                 },
 
                 new Amenities
                 {
                     ID = 4,
-                    Name = "Masseuse",
+                    Name = "Masseuse"
                 },
 
                 new Amenities
                 {
                     ID = 5,
-                    Name = "Theater Room",
+                    Name = "Theater Room"
                 },
 
                 new Amenities
                 {
                     ID = 6,
-                    Name = "Infinity Pool",
+                    Name = "Infinity Pool"
                 }
                 );
 
