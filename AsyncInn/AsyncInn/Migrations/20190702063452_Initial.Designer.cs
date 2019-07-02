@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AsyncInn.Migrations
 {
     [DbContext(typeof(AsyncInnDBContext))]
-    [Migration("20190701095848_Updates1")]
-    partial class Updates1
+    [Migration("20190702063452_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -31,12 +31,45 @@ namespace AsyncInn.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Amenities");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Name = "Sauna"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Name = "Butler"
+                        },
+                        new
+                        {
+                            ID = 3,
+                            Name = "Chef"
+                        },
+                        new
+                        {
+                            ID = 4,
+                            Name = "Masseuse"
+                        },
+                        new
+                        {
+                            ID = 5,
+                            Name = "Theater Room"
+                        },
+                        new
+                        {
+                            ID = 6,
+                            Name = "Infinity Pool"
+                        });
                 });
 
             modelBuilder.Entity("AsyncInn.Models.Hotel", b =>
                 {
-                    b.Property<string>("ID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("City");
 
@@ -51,6 +84,53 @@ namespace AsyncInn.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Hotels");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            City = "Seattle",
+                            Name = "Belltown",
+                            Phone = "(206) 448 - 8600",
+                            State = "Washington",
+                            StreetAddress = "2000 4th Ave"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            City = "Austin",
+                            Name = "North Congress",
+                            Phone = "(512) 600-2000",
+                            State = "Texas",
+                            StreetAddress = "101 Red River St"
+                        },
+                        new
+                        {
+                            ID = 3,
+                            City = "Chicago",
+                            Name = "North Side",
+                            Phone = "(312) 646-1300",
+                            State = "Illinois",
+                            StreetAddress = "11 E Walton St"
+                        },
+                        new
+                        {
+                            ID = 4,
+                            City = "New York",
+                            Name = "Manhattan",
+                            Phone = "(646) 774-1234",
+                            State = "New York",
+                            StreetAddress = "153 W 57th St"
+                        },
+                        new
+                        {
+                            ID = 5,
+                            City = "Los Angeles",
+                            Name = "West Hollywood",
+                            Phone = "(206) 448 - 8600",
+                            State = "California",
+                            StreetAddress = "8221 Sunset Blvd"
+                        });
                 });
 
             modelBuilder.Entity("AsyncInn.Models.HotelRoom", b =>
@@ -59,8 +139,6 @@ namespace AsyncInn.Migrations
 
                     b.Property<int>("RoomNumber");
 
-                    b.Property<string>("HotelID1");
-
                     b.Property<byte>("PetFriendly");
 
                     b.Property<decimal>("Rate");
@@ -68,8 +146,6 @@ namespace AsyncInn.Migrations
                     b.Property<int>("RoomID");
 
                     b.HasKey("HotelID", "RoomNumber");
-
-                    b.HasIndex("HotelID1");
 
                     b.HasIndex("RoomID");
 
@@ -108,7 +184,8 @@ namespace AsyncInn.Migrations
                 {
                     b.HasOne("AsyncInn.Models.Hotel", "Hotel")
                         .WithMany("HotelRooms")
-                        .HasForeignKey("HotelID1");
+                        .HasForeignKey("HotelID")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("AsyncInn.Models.Room", "Room")
                         .WithMany("HotelRooms")
