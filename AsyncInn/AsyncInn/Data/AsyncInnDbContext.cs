@@ -79,7 +79,7 @@ namespace AsyncInn.Data
                 }
                 );
 
-            modelBuilder.Entity<Hotel>().HasData(
+            modelBuilder.Entity<Amenities>().HasData(
                 new Amenities
                 {
                     ID = 1,
@@ -116,6 +116,7 @@ namespace AsyncInn.Data
                     Name = "Infinity Pool"
                 }
                 );
+
 
         }
 
